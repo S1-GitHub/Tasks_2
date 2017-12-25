@@ -1,0 +1,145 @@
+Вывести на  экран все четные цифры от 1 до 100 не используя остаток от деления (используя цикл for)
+for(int i=0;i<=100;i=i+2) {
+	System.out.println(i);
+
+Посчитать сумму цифр от 20 до 200 и результат вывести на экран (используя цикл for)
+int ch=0;
+	for(int i=20;i<=200;i++) {
+	ch=ch+i;
+ 	System.out.println(ch);
+
+Пройти циклом по числам от 1 до 12 и вывести название месяца, соответствующее каждому числу (используя цикл и оператор if else)
+int user;
+		Scanner sc = new Scanner(System.in);
+		user = sc.nextInt();
+
+		if (user == 1) {
+			System.out.println("Январь");
+			
+		} else if (user == 2) {
+			System.out.println("Февраль");
+		}
+
+		else if (user == 3) {
+			System.out.println("Март");
+		}
+
+		else if (user == 4) {
+			System.out.println("Апрель");
+		}
+
+		else if (user == 5) {
+			System.out.println("Май");
+		}
+
+		else if (user == 6) {
+			System.out.println("Июнь");
+		}
+
+		else if (user == 7) {
+			System.out.println("Июль");
+		}
+
+		else if (user == 8) {
+			System.out.println("Август");
+		}
+
+		else if (user == 9) {
+			System.out.println("Сентябрь");
+		}
+
+		else if (user == 10) {
+			System.out.println("Октябрь");
+		}
+
+		else if (user == 11) {
+			System.out.println("Ноябрь");
+		}
+
+		else if (user == 12) {
+			System.out.println("Декабрь");
+		} else {
+			System.out.println("Нет такого ещё месяца...");
+		}
+    
+    Заполнить массив x целыми числами и вывести содержимое массива x на экран
+		Random r=new Random();
+		int[] masiv=new int[100];
+
+		for(int i=0;i<masiv.length;i++) {
+		masiv[i]=r.nextInt(100000);
+						
+			System.out.println(masiv[i]);
+
+Заполнить массив размером из 100 элементов случайными целыми числами
+Scanner sc = new Scanner(System.in);
+		Random r = new Random();
+		int x = sc.nextInt();
+		int[] mass = new int[100];
+		for (int i = 0; i < mass.length; i++) {
+		mass[i] = r.nextInt(500);	
+		System.out.println(mass[i]);
+
+Вывести из массива (задание 3) все чётные элементы на экран
+		sc = new Scanner(System.in);
+		Random r = new Random();
+		int[] mass = new int[100];
+		for (int i = 0; i < mass.length; i++) {
+			mass[i] = r.nextInt(500);
+			if (mass[i] % 2 == 0) {
+				System.out.println(mass[i]);
+
+Подсчитать количество чётных и нечётных элементов в массиве из задания 3. Количество чётных и количество нечётных вывести на экран
+int sumch = 0;
+		int sumnch = 0;
+		Scanner sc = new Scanner(System.in);
+		Random r = new Random();
+		System.out.println("Введи длину массива:");
+		int x = sc.nextInt();
+		int[] mass = new int[x];
+		for (int i = 0; i < mass.length; i++) {
+			mass[i] = r.nextInt(500);
+			System.out.println(mass[i]);
+			if (mass[i] % 2 == 0) {
+				sumch += mass[i];
+
+			} else {
+				sumnch += mass[i];
+
+			}
+
+		}
+		System.out.println("Диапазон массива: 0 - 500");
+		System.out.println("Длина массива: " + x);
+		System.out.println("Сумма чётных: " + sumch);
+		System.out.println("Сумма нечётных: " + sumnch);
+
+Найти и вывести на экран максимальный / минимальный элемент из задания 3
+		Random r = new Random();
+		int[] masiv = new int[100];
+		int max =masiv[0];
+		double min =Double.MAX_VALUE;
+		for (int i = 0; i < masiv.length; i++) {
+			masiv[i] = r.nextInt(500);
+			if(masiv[i]>max)
+				max=masiv[i];
+min=Math.min(min, masiv[i]);
+
+			System.out.println(masiv[i]);
+		}
+		System.out.println("max "+max);
+		System.out.println("min "+min);
+    
+    
+Все элементы массива поделить на значение наибольшего элемента этого массива.
+int[] mas = { 12, 54, 864, 46, 657, 3, 37, 965, 4, 54, 52, 567 };
+		double max = Double.MIN_VALUE;
+		double del = 0;
+
+		for (int i = 0; i < mas.length; i++) {
+			max = Math.max(max, mas[i]);
+			del = mas[i] / max;
+			System.out.println(mas[i]);
+			System.out.println("Delenie "+del);
+		}
+		System.out.println("MAX " + max);
